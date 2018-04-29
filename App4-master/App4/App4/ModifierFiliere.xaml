@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.ModifierFiliere">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Etudiant" Activated="EtudiantItem_Activeted" Order="Secondary"/>
+        <ToolbarItem Text="Filière" Activated="FiliereItem_Activeted" Order="Secondary"/>
+        <ToolbarItem Text="Statistique" Activated="StatistiqeItem_Activeted" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout x:Name="addAnnimation">
+            <Entry x:Name="id" Placeholder="ID filiere" IsEnabled="false"/>
+            <Entry x:Name="nom" Placeholder="Nom Filiere"/>
+            <Entry x:Name="resp" Placeholder="Responsable"/>
+            <DatePicker x:Name="date" Format="dd/MM/yyyy" />
+
+            <Button Text="enregistrer les modifications" BackgroundColor="#2196F3"
+                    Clicked="Enregistrer_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

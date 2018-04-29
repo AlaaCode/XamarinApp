@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.AjoutEtudiant">
+    <ContentPage.Content>
+        <ScrollView IsVisible="True" Orientation="Both">
+            <StackLayout Spacing="10" Padding="10">
+                <Label Text="Image will show here"/>
+                <Image x:Name="image" Aspect="AspectFit" WidthRequest="100" HeightRequest="100" Margin="10"/>
+                <Entry x:Name="nom" Placeholder="Nom"></Entry>
+                <Entry x:Name="adresse" Placeholder="Adresse"></Entry>
+                <Entry x:Name="sexe" Placeholder="Sexe"></Entry>
+                <Entry x:Name="prenom" Placeholder="Prenom"></Entry>
+                <Entry x:Name="cne" Placeholder="Cne" Keyboard="Numeric" IsEnabled="False"></Entry>
+                <DatePicker x:Name="date" Format="dd/MM/yyyy" />
+                <Entry x:Name="tel" Placeholder="Tel ex:(+212xxxxxxxxx)" Keyboard="Telephone"></Entry>
+                <Button x:Name="takePhoto" Text="Take Photo"></Button>
+                <Button x:Name="pickPhoto" Text="Pick Photo"></Button>
+                <Label Text="Save to Gallery"/>
+                <Switch x:Name="saveToGallery" IsToggled="false" HorizontalOptions="Center"/>
+                <Entry x:Name="gmail" Placeholder="Gmail ex:exemple@hotmail.com" Keyboard="Email"></Entry>
+                <Picker x:Name="picker" Title="Select a Filiere"/>
+                <Label Text="Test" x:Name="FiliereSelectionnée"/>
+                <Button Text="Save" Clicked="AjouterEtudiant" BackgroundColor="#81C134"  BorderRadius="0" TextColor="White"></Button>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

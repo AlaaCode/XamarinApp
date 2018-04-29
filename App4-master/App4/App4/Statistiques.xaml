@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             x:Class="App4.Statistiques">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="G.Stats.  |  " Order="Primary"/>
+            <ToolbarItem Text="Bars" Activated="BarsItem_Activeted"/>
+            <ToolbarItem Text="Donuts" Activated="DonutsItem_Activeted"/>
+            <ToolbarItem Text="Courbe" Activated="CourbeItem_Activeted"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout Margin="10,10,10,10">
+        <!--Entry Grid.Row="2" x:Name="show" Text="show"/-->
+        <forms:ChartView x:Name="chart" HeightRequest="500"/>
+    </StackLayout>
+</ContentPage>

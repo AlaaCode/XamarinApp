@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             x:Class="App4.EtudiantProfil">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            <controls:CircleImage VerticalOptions="Center"
+                                              BorderColor="#3498DB"
+                                              BorderThickness="2"
+                                              Aspect="AspectFill"
+                                  x:Name="image"
+                                                          Margin="20,5,5,5">
+                <controls:CircleImage.WidthRequest>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="55" Android="150" WinPhone="75"/>
+                </controls:CircleImage.WidthRequest>
+                <controls:CircleImage.HeightRequest>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="55" Android="150" WinPhone="75"/>
+                </controls:CircleImage.HeightRequest>
+            </controls:CircleImage>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,1">
+                <Label Text="Nom : " FontSize="Medium" FontFamily="Times New Roman" FontAttributes="Bold"></Label>
+                    <Label x:Name="nom" Margin="20,0,0,0" FontSize="Medium"  TextColor="#3498DB" LineBreakMode="NoWrap" FontFamily="Lobster-Regular"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,1">
+                <Label Text="Adresse : " FontSize="Medium" FontAttributes="Bold"></Label>
+                    <Label x:Name="adresse" Margin="20,0,0,0" FontSize="Medium" TextColor="#3498DB" LineBreakMode="NoWrap"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,1" >
+                    <Label Text="Prenom : " FontSize="Medium" FontAttributes="Bold"></Label>
+                    <Label x:Name="prenom" Margin="20,0,0,0" FontSize="Medium" TextColor="#3498DB" LineBreakMode="NoWrap"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,1">
+                    <Label Text="Cne : " FontSize="Medium" FontAttributes="Bold"></Label>
+                    <Label x:Name="cne" Margin="20,0,0,0" FontSize="Medium" TextColor="#3498DB" LineBreakMode="NoWrap"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,1">
+                    <Label Text="Téléphone : " FontSize="Medium" FontAttributes="Bold"></Label>
+                    <Label x:Name="tel" Margin="20,0,0,0" FontSize="Medium" TextColor="#3498DB" LineBreakMode="NoWrap"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,1">
+                    <Label Text="Sexe : " FontSize="Medium" FontAttributes="Bold"></Label>
+                    <Label x:Name="sexe" Margin="20,0,0,0" FontSize="Medium" TextColor="#3498DB" LineBreakMode="NoWrap"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,1">
+                    <Label Text="Filière : " FontSize="Medium" FontAttributes="Bold"></Label>
+                    <Label x:Name="filiere" Margin="20,0,0,0" FontSize="Medium" TextColor="#3498DB" LineBreakMode="NoWrap"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,1">
+                    <Label Text="Date de Naissance : " FontSize="Medium" FontAttributes="Bold"></Label>
+                    <Label x:Name="date" Margin="10,0,0,0" FontSize="Medium" TextColor="#3498DB" LineBreakMode="NoWrap"></Label>
+            </StackLayout>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App4;assembly=App4"
+             x:Class="App4.LoginPage"
+             BackgroundImage="bg.jpg"
+             >
+    
+    <ContentPage.Content>
+
+        <StackLayout>
+            <!-- grid pour le logo -->
+            <Grid>
+                <Image Source="clogo.png" WidthRequest="110" HeightRequest="110" Margin="20" />
+            </Grid>
+            
+            <!-- grid pour l'email -->
+            <Grid Margin="20,20,20,0">
+                <Grid.RowDefinitions >
+                    <RowDefinition Height = "Auto"/>
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width = "Auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <Image Source="Message2.png" Grid.Row="0" Grid.Column="0" />
+                <Entry x:Name="emailField" Grid.Row="0" Grid.Column="1" Placeholder="email" PlaceholderColor="White" TextColor="White" Keyboard="Email" />
+            </Grid>
+
+            <!-- grid pour le password -->
+            <Grid Margin="20,20,20,0">
+                <Grid.RowDefinitions >
+                    <RowDefinition Height = "Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width = "Auto"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="Password.png" Grid.Row="0" Grid.Column="0" />
+                <Entry x:Name="passwordField" Grid.Row="0" Grid.Column="1" Placeholder="password" PlaceholderColor="White" TextColor="White" IsPassword="True"/>
+            </Grid>
+
+            <!-- grid pour le bouton -->
+            <Grid Margin="20,20,20,0">
+                <Button Text="LogIn" BackgroundColor="White" TextColor="#3897f0" HeightRequest="50" Clicked="Handle_Clicked" />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

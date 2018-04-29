@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App4"
+             x:Class="App4.MainPage">
+
+    <ContentPage.ToolbarItems>
+        
+        <ToolbarItem Text="Etudiant" Activated="EtudiantItem_Activeted" Order="Primary"/>
+        <ToolbarItem Text="Filière" Activated="FiliereItem_Activeted" Order="Primary"/>
+        <ToolbarItem Text="Statistique" Activated="StatistiqeItem_Activeted" Order="Primary"/>
+    </ContentPage.ToolbarItems>
+    <Grid RowSpacing="0" ColumnSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image
+                x:Name="HeroImage"
+                Grid.ColumnSpan="2"
+				Source="intro_image01"
+                Aspect="AspectFill"
+				HorizontalOptions="Center"
+				VerticalOptions ="Center"/>
+        <Button 
+				x:Name="ButtonFindStore"
+				Grid.Row="1"
+				BackgroundColor="#3498DB"
+				BorderRadius="0"
+				TextColor="White" 
+				Text="Welcome"/>
+        <Button 
+				x:Name="ButtonLeaveFeedback"
+				Grid.Row="1"
+				Grid.Column="1"
+				BackgroundColor="#81C134" 
+				BorderRadius="0"
+				TextColor="White"
+				Text="To EnsasWare"/>
+    </Grid>
+
+
+</ContentPage>
